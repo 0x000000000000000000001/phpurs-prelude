@@ -9,7 +9,6 @@ $Data_Ord_ordIntImpl = function ($lt) {
                 };
             };
         };
-    };
 };
 
 $Data_Ord_ordStringImpl = $Data_Ord_ordIntImpl;

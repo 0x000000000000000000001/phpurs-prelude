@@ -1,7 +1,5 @@
 <?php
 
-$Data_Functor_arrayMap = function ($f) {
-    return function ($arr) use (&$f) {
+$Data_Functor_arrayMap = function ($f, $arr) {
         return array_map($f, $arr);
-    };
 };

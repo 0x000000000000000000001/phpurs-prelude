@@ -16,8 +16,6 @@ $Data_Show_showCharImpl = function ($c) {
     return $c;
 };
 
-$Data_Show_showArrayImpl = function ($f) {
-    return function ($xs) use (&$f) {
+$Data_Show_showArrayImpl = function ($f, $xs) {
         return "[" . implode(",", array_map($f, $xs)) . "]";
-    };
 };

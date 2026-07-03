@@ -1,9 +1,7 @@
 <?php
 
-$Data_Eq_eqIntImpl = function ($a) {
-    return function ($b) use (&$a) {
+$Data_Eq_eqIntImpl = function ($a, $b) {
         return $a === $b;
-    };
 };
 
 $Data_Eq_eqStringImpl = $Data_Eq_eqIntImpl;
