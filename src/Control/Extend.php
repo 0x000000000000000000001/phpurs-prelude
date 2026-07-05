@@ -48,5 +48,4 @@ function phpurs_uncurry5($fn) {
 
 
 
-
-$Data_Functor_arrayMap = phpurs_uncurry2(function($f) { return function($arr) use(&$f) { return array_map($f, $arr); }; });
+$Control_Extend_arrayExtend = phpurs_uncurry2(function($f) { return function($xs) use(&$f) { $r = []; for($i=0; $i<count($xs); $i++) { $r[] = $f(array_slice($xs, $i)); } return $r; }; });
