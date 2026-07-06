@@ -1,3 +1,6 @@
 <?php
 
-$Control_Applicative_arrayPure = function($x) { return [$x]; };
+$arrayPure = function($x) use (&$arrayPure) { return [$x]; };
+
+$exports['arrayPure'] = $arrayPure;
+return $exports;
