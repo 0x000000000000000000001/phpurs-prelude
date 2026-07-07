@@ -4,7 +4,7 @@ $intDegree = function($x) use (&$intDegree) { return abs($x); };
 $intDiv = function($x, $y = null) use (&$intDiv) {
     if (func_num_args() < 2) {
         $__args = func_get_args();
-        return function(...$more) use ($__args, &$intDegree) {
+        return function(...$more) use ($__args, &$intDiv) {
 
             return $intDiv(...array_merge($__args, $more));
         };
@@ -14,7 +14,7 @@ $intDiv = function($x, $y = null) use (&$intDiv) {
 $intMod = function($x, $y = null) use (&$intMod) {
     if (func_num_args() < 2) {
         $__args = func_get_args();
-        return function(...$more) use ($__args, &$intDiv) {
+        return function(...$more) use ($__args, &$intMod) {
 
             return $intMod(...array_merge($__args, $more));
         };
@@ -24,7 +24,7 @@ $intMod = function($x, $y = null) use (&$intMod) {
 $numDiv = function($x, $y = null) use (&$numDiv) {
     if (func_num_args() < 2) {
         $__args = func_get_args();
-        return function(...$more) use ($__args, &$intMod) {
+        return function(...$more) use ($__args, &$numDiv) {
 
             return $numDiv(...array_merge($__args, $more));
         };
