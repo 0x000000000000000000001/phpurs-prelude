@@ -17,7 +17,7 @@ $unsafeGet = function($label, $rec = null) use (&$unsafeGet) {
             return $unsafeGet(...array_merge($__args, $more));
         };
     }
-    return $rec->$label;
+    return $rec->$label ?? null;
 };
 
 $unsafeSet = function($label, $value = null, $rec = null) use (&$unsafeSet) {
