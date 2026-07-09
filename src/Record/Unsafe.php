@@ -11,13 +11,18 @@ $unsafeHas = function($label, $rec = null) use (&$unsafeHas) {
 };
 
 $unsafeGet = function($label, $rec = null) use (&$unsafeGet) {
-    if (func_num_args() < 2) {
+    $num = func_num_args();
+    if ($num < 2) {
         $__args = func_get_args();
         return function(...$more) use ($__args, &$unsafeGet) {
             return $unsafeGet(...array_merge($__args, $more));
         };
     }
-    return $rec->$label ?? null;
+    $res = $rec->$label ?? null;
+    if ($num > 2) {
+        return $res(...array_slice(func_get_args(), 2));
+    }
+    return $res;
 };
 
 $unsafeSet = function($label, $value = null, $rec = null) use (&$unsafeSet) {

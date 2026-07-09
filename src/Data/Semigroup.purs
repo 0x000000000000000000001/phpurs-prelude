@@ -82,3 +82,4 @@ instance semigroupRecordCons ::
     get = unsafeGet key :: Record row -> focus
     insert = unsafeSet key :: focus -> Record subrowTail -> Record subrow
     tail = appendRecord (Proxy :: Proxy rowlistTail) ra rb
+
