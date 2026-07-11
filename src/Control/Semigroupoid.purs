@@ -13,8 +13,10 @@ class Semigroupoid :: forall k. (k -> k -> Type) -> Constraint
 class Semigroupoid a where
   compose :: forall b c d. a c d -> a b c -> a b d
 
+foreign import composeImpl :: forall a b c. (b -> c) -> (a -> b) -> (a -> c)
+
 instance semigroupoidFn :: Semigroupoid (->) where
-  compose f g x = f (g x)
+  compose = composeImpl
 
 infixr 9 compose as <<<
 
