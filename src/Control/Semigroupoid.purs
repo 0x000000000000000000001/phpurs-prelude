@@ -25,3 +25,4 @@ composeFlipped :: forall a b c d. Semigroupoid a => a b c -> a c d -> a b d
 composeFlipped f g = compose g f
 
 infixr 9 composeFlipped as >>>
+ 

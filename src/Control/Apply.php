@@ -1,11 +1,11 @@
 <?php
 
 $arrayApply = function($fs, $xs = null) use (&$arrayApply) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
         return function(...$more) use ($__args, &$arrayApply) {
 
-            return $arrayApply(...array_merge($__args, $more));
+            return $arrayApply(...\array_merge($__args, $more));
         };
     }
     $r = []; foreach($fs as $f) { foreach($xs as $x) { $r[] = $f($x); } } return $r;

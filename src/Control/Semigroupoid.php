@@ -12,28 +12,41 @@ class PhpursCompose {
     }
     
     public function __invoke($a = null) {
-        $__num = func_num_args();
+        $__num = \func_num_args();
         $g = $this->g;
         $f = $this->f;
         
         $res = $f($g($a));
         
         if ($__num > 1) {
-            return $res(...array_slice(func_get_args(), 1));
+            return $res(...\array_slice(\func_get_args(), 1));
         }
         return $res;
     }
 }
 
-$_composeImpl = function($f, $g = null) use (&$_composeImpl) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
-        return function(...$more) use ($__args, &$_composeImpl) {
-            return $_composeImpl(...array_merge($__args, $more));
+$_composeImpl = function($f, $g = null) {
+    if (\func_num_args() === 1) {
+        return function($g) use ($f) {
+            return function($a = null) use ($f, $g) {
+                $__num = \func_num_args();
+                $res = $f($g($a));
+                if ($__num > 1) {
+                    return $res(...\array_slice(\func_get_args(), 1));
+                }
+                return $res;
+            };
         };
     }
     
-    return new PhpursCompose($f, $g);
+    return function($a = null) use ($f, $g) {
+        $__num = \func_num_args();
+        $res = $f($g($a));
+        if ($__num > 1) {
+            return $res(...\array_slice(\func_get_args(), 1));
+        }
+        return $res;
+    };
 };
 
 $exports['composeImpl'] = $_composeImpl;
