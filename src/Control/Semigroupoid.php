@@ -26,7 +26,8 @@ class PhpursCompose {
 }
 
 $_composeImpl = function($f, $g = null) {
-    if (\func_num_args() === 1) {
+    $num = \func_num_args();
+    if ($num === 1) {
         return function($g) use ($f) {
             return function($a = null) use ($f, $g) {
                 $__num = \func_num_args();
@@ -39,14 +40,19 @@ $_composeImpl = function($f, $g = null) {
         };
     }
     
-    return function($a = null) use ($f, $g) {
+    $res = function($a = null) use ($f, $g) {
         $__num = \func_num_args();
-        $res = $f($g($a));
+        $res2 = $f($g($a));
         if ($__num > 1) {
-            return $res(...\array_slice(\func_get_args(), 1));
+            return $res2(...\array_slice(\func_get_args(), 1));
         }
-        return $res;
+        return $res2;
     };
+
+    if ($num > 2) {
+        return $res(...\array_slice(\func_get_args(), 2));
+    }
+    return $res;
 };
 
 $exports['composeImpl'] = $_composeImpl;

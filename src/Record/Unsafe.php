@@ -7,7 +7,7 @@ $unsafeHas = function($label, $rec = null) use (&$unsafeHas) {
             return $unsafeHas(...\array_merge($__args, $more));
         };
     }
-    return property_exists($rec, $label);
+    return \is_array($rec) ? \array_key_exists($label, $rec) : \property_exists($rec, $label);
 };
 
 $unsafeGet = function($label, $rec = null) use (&$unsafeGet) {
@@ -18,7 +18,7 @@ $unsafeGet = function($label, $rec = null) use (&$unsafeGet) {
             return $unsafeGet(...\array_merge($__args, $more));
         };
     }
-    $res = $rec->$label ?? null;
+    $res = (\is_array($rec) ? ($rec[$label] ?? null) : ($rec->$label ?? null));
     if ($num > 2) {
         return $res(...\array_slice(\func_get_args(), 2));
     }
@@ -32,6 +32,11 @@ $unsafeSet = function($label, $value = null, $rec = null) use (&$unsafeSet) {
             return $unsafeSet(...\array_merge($__args, $more));
         };
     }
+    if (\is_array($rec)) {
+        $copy = $rec;
+        $copy[$label] = $value;
+        return $copy;
+    }
     $copy = clone $rec;
     $copy->$label = $value;
     return $copy;
@@ -43,6 +48,11 @@ $unsafeDelete = function($label, $rec = null) use (&$unsafeDelete) {
         return function(...$more) use ($__args, &$unsafeDelete) {
             return $unsafeDelete(...\array_merge($__args, $more));
         };
+    }
+    if (\is_array($rec)) {
+        $copy = $rec;
+        unset($copy[$label]);
+        return $copy;
     }
     $copy = clone $rec;
     unset($copy->$label);
