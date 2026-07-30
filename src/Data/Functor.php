@@ -1,13 +1,6 @@
 <?php
 
-$arrayMap = function($f, $arr = null) use (&$arrayMap) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$arrayMap) {
-
-            return $arrayMap(...\array_merge($__args, $more));
-        };
-    }
+$arrayMap = function($f, $arr) use (&$arrayMap) {
     return array_map($f, $arr);
 };
 
