@@ -12,9 +12,17 @@ class PhpursCompose {
     }
     
     public function __invoke($a) {
+        $__num = \func_num_args();
         $g = $this->g;
         $f = $this->f;
-        return $f($g($a));
+        
+        $res = $f($g($a));
+        
+        if ($__num > 1) {
+            return $res(...\array_slice(\func_get_args(), 1));
+        }
+        
+        return $res;
     }
 }
 
