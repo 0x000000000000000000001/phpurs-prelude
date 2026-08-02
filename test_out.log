@@ -1,0 +1,182 @@
+=== Building project with spago ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: prelude
+
+Downloading dependencies...
+No lockfile found, generating it...
+Lockfile written to spago.lock. Please commit this file.
+Building...
+[  1 of 163] Compiling Unsafe.Coerce
+[  2 of 163] Compiling Type.Proxy
+[  3 of 163] Compiling Spago.Generated.BuildInfo
+[  4 of 163] Compiling Type.Equality
+[  5 of 163] Compiling Record.Unsafe
+[  6 of 163] Compiling Data.Void
+[  7 of 163] Compiling Partial
+[  8 of 163] Compiling Data.Traversable.Accum
+[  9 of 163] Compiling Data.Unit
+[ 10 of 163] Compiling Data.NaturalTransformation
+[ 11 of 163] Compiling Data.Int.Bits
+[ 12 of 163] Compiling Data.Boolean
+[ 13 of 163] Compiling Control.Semigroupoid
+[ 14 of 163] Compiling Control.Lazy
+[ 15 of 163] Compiling Data.Symbol
+[ 16 of 163] Compiling Data.Exists
+[ 17 of 163] Compiling Partial.Unsafe
+[ 18 of 163] Compiling Safe.Coerce
+[ 19 of 163] Compiling Control.Category
+[ 20 of 163] Compiling Data.Function.Uncurried
+[ 21 of 163] Compiling Data.Semigroup
+[ 22 of 163] Compiling Data.HeytingAlgebra
+[ 23 of 163] Compiling Data.Semiring
+[ 24 of 163] Compiling Data.Show
+[ 25 of 163] Compiling Data.Ring
+[ 26 of 163] Compiling Data.Generic.Rep
+[ 28 of 163] Compiling Data.BooleanAlgebra
+[ 27 of 163] Compiling Data.Eq
+[ 29 of 163] Compiling Data.CommutativeRing
+[ 30 of 163] Compiling Data.Ordering
+[ 31 of 163] Compiling Data.EuclideanRing
+[ 32 of 163] Compiling Data.Ord
+[ 33 of 163] Compiling Data.DivisionRing
+[ 34 of 163] Compiling Data.Field
+[ 36 of 163] Compiling Data.Bounded
+[ 35 of 163] Compiling Data.Function
+[ 37 of 163] Compiling Data.Reflectable
+[ 38 of 163] Compiling Data.Monoid
+[ 39 of 163] Compiling Data.Functor
+[ 41 of 163] Compiling Control.Alt
+[ 40 of 163] Compiling Control.Apply
+[ 42 of 163] Compiling Data.Monoid.Generic
+[ 43 of 163] Compiling Data.Bounded.Generic
+[ 44 of 163] Compiling Control.Extend
+[ 45 of 163] Compiling Control.Plus
+[ 46 of 163] Compiling Control.Comonad
+[ 47 of 163] Compiling Control.Applicative
+[ 48 of 163] Compiling Control.Alternative
+[ 49 of 163] Compiling Control.Bind
+[ 50 of 163] Compiling Control.Monad
+[ 51 of 163] Compiling Prelude
+[ 52 of 163] Compiling Control.MonadPlus
+[ 53 of 163] Compiling Effect
+[ 54 of 163] Compiling Data.Number.Format
+[ 55 of 163] Compiling Data.Monoid.Dual
+[ 56 of 163] Compiling Data.Traversable.Accum.Internal
+[ 57 of 163] Compiling Data.Semigroup.Last
+[ 58 of 163] Compiling Data.Show.Generic
+[ 59 of 163] Compiling Data.Monoid.Additive
+[ 60 of 163] Compiling Data.Semigroup.First
+[ 61 of 163] Compiling Data.Ring.Generic
+[ 62 of 163] Compiling Data.Semigroup.Generic
+[ 63 of 163] Compiling Test.Utils
+[ 64 of 163] Compiling Data.Monoid.Conj
+[ 65 of 163] Compiling Data.Semiring.Generic
+[ 66 of 163] Compiling Data.Ord.Generic
+[ 67 of 163] Compiling Data.Monoid.Endo
+[ 68 of 163] Compiling Data.Eq.Generic
+[ 69 of 163] Compiling Data.HeytingAlgebra.Generic
+[ 71 of 163] Compiling Data.Monoid.Disj
+[ 72 of 163] Compiling Effect.Uncurried
+[ 70 of 163] Compiling Data.Monoid.Multiplicative
+[ 73 of 163] Compiling Effect.Unsafe
+[ 75 of 163] Compiling Effect.Console
+[ 74 of 163] Compiling Effect.Ref
+[ 76 of 163] Compiling Effect.Class
+[ 77 of 163] Compiling Test.Assert
+[ 78 of 163] Compiling Effect.Class.Console
+[ 79 of 163] Compiling Data.Newtype
+[ 80 of 163] Compiling Test.Data.Generic.Rep
+[ 82 of 163] Compiling Data.Monoid.Alternate
+[ 81 of 163] Compiling Data.Profunctor
+[ 83 of 163] Compiling Data.Ord.Max
+[ 85 of 163] Compiling Data.Ord.Down
+[ 84 of 163] Compiling Data.Functor.App
+[ 86 of 163] Compiling Data.Ord.Min
+[ 87 of 163] Compiling Data.Profunctor.Closed
+[ 88 of 163] Compiling Data.Functor.Invariant
+[ 89 of 163] Compiling Data.Functor.Compose
+[ 91 of 163] Compiling Data.Const
+[ 90 of 163] Compiling Data.Tuple
+[ 92 of 163] Compiling Data.Identity
+[ 93 of 163] Compiling Data.Profunctor.Join
+[ 94 of 163] Compiling Data.Profunctor.Split
+[ 95 of 163] Compiling Data.Maybe
+[ 96 of 163] Compiling Data.Functor.Contravariant
+[ 97 of 163] Compiling Data.Predicate
+[ 98 of 163] Compiling Data.Op
+[ 99 of 163] Compiling Data.Comparison
+[100 of 163] Compiling Data.Equivalence
+[102 of 163] Compiling Data.Maybe.Last
+[101 of 163] Compiling Data.Either
+[104 of 163] Compiling Data.Maybe.First
+[103 of 163] Compiling Data.Number
+[105 of 163] Compiling Data.Int
+[106 of 163] Compiling Data.Number.Approximate
+[107 of 163] Compiling Data.Divide
+[109 of 163] Compiling Data.Distributive
+[110 of 163] Compiling Data.Profunctor.Costrong
+[108 of 163] Compiling Data.Tuple.Nested
+[111 of 163] Compiling Data.Profunctor.Strong
+[112 of 163] Compiling Performance.Minibench
+[113 of 163] Compiling Data.Divisible
+[114 of 163] Compiling Data.Decide
+[115 of 163] Compiling Data.Bifunctor
+[116 of 163] Compiling Effect.Exception
+[117 of 163] Compiling Data.Profunctor.Choice
+[119 of 163] Compiling Data.Either.Inject
+[118 of 163] Compiling Data.Either.Nested
+[120 of 163] Compiling Data.Profunctor.Cochoice
+[121 of 163] Compiling Effect.Exception.Unsafe
+[122 of 163] Compiling Data.Functor.Product
+[124 of 163] Compiling Data.Functor.Costar
+[123 of 163] Compiling Control.Monad.Rec.Class
+[125 of 163] Compiling Data.Functor.Coproduct
+[127 of 163] Compiling Data.Profunctor.Star
+[126 of 163] Compiling Control.Biapply
+[128 of 163] Compiling Data.Decidable
+[129 of 163] Compiling Test.Main
+[130 of 163] Compiling Control.Biapplicative
+[132 of 163] Compiling Data.Functor.Product2
+[131 of 163] Compiling Data.Bifunctor.Join
+[133 of 163] Compiling Data.Functor.Clown
+[134 of 163] Compiling Data.Functor.Joker
+[135 of 163] Compiling Data.Functor.Flip
+[136 of 163] Compiling Data.Functor.Product.Nested
+[137 of 163] Compiling Data.Functor.Coproduct.Inject
+[138 of 163] Compiling Data.Foldable
+[139 of 163] Compiling Data.Functor.Coproduct.Nested
+[140 of 163] Compiling Data.FunctorWithIndex
+[141 of 163] Compiling Control.Monad.ST.Internal
+[142 of 163] Compiling Control.Monad.ST
+[144 of 163] Compiling Control.Monad.ST.Ref
+[143 of 163] Compiling Control.Monad.ST.Uncurried
+[145 of 163] Compiling Control.Monad.ST.Global
+[146 of 163] Compiling Control.Monad.ST.Class
+[147 of 163] Compiling Data.Array.ST
+[148 of 163] Compiling Data.Array.ST.Partial
+[149 of 163] Compiling Data.Array.ST.Iterator
+[150 of 163] Compiling Data.Traversable
+[151 of 163] Compiling Data.Bifoldable
+[152 of 163] Compiling Data.Semigroup.Foldable
+[153 of 163] Compiling Data.FoldableWithIndex
+[154 of 163] Compiling Data.Semigroup.Traversable
+[155 of 163] Compiling Data.Bitraversable
+[156 of 163] Compiling Data.Unfoldable1
+[157 of 163] Compiling Data.TraversableWithIndex
+[158 of 163] Compiling Data.Unfoldable
+[159 of 163] Compiling Data.Array.NonEmpty.Internal
+[160 of 163] Compiling Data.NonEmpty
+[161 of 163] Compiling Data.Array
+[163 of 163] Compiling Data.Array.Partial
+[162 of 163] Compiling Data.Array.NonEmpty
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Generating PHP code with phpurs ===
+Writing main.mod.php for Test.Main
+=== Running PHP test script ===
+No output/Test.Main/main.php found.
