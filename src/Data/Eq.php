@@ -4,7 +4,9 @@ $eqIntImpl = function($a, $b) use (&$eqIntImpl) {
     return $a === $b;
 };
 $eqStringImpl = $eqIntImpl;
-$eqNumberImpl = $eqIntImpl;
+$eqNumberImpl = function($a, $b) use (&$eqNumberImpl) {
+    return (float)$a === (float)$b;
+};
 $eqCharImpl = $eqIntImpl;
 $eqBooleanImpl = $eqIntImpl;
 

@@ -4,7 +4,9 @@ $ordIntImpl = function($lt, $eq, $gt, $x, $y) use (&$ordIntImpl) {
     return $x < $y ? $lt : ($x === $y ? $eq : $gt);
 };
 $ordStringImpl = $ordIntImpl;
-$ordNumberImpl = $ordIntImpl;
+$ordNumberImpl = function($lt, $eq, $gt, $x, $y) use (&$ordNumberImpl) {
+    return (float)$x < (float)$y ? $lt : ((float)$x === (float)$y ? $eq : $gt);
+};
 $ordCharImpl = $ordIntImpl;
 $ordBooleanImpl = $ordIntImpl;
 
