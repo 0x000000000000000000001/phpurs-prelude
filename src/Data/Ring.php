@@ -1,9 +1,11 @@
 <?php
 
 $intSub = function($a, $b) use (&$intSub) {
-    return $a - $b;
+    return (($a - $b) << 32) >> 32;
 };
-$numSub = $intSub;
+$numSub = function($a, $b) use (&$numSub) {
+    return (float)($a - $b);
+};
 
 $exports['intSub'] = $intSub;
 $exports['numSub'] = $numSub;

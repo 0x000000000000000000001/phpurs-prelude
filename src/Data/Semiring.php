@@ -1,13 +1,17 @@
 <?php
 
 $intAdd = function($a, $b) use (&$intAdd) {
-    return $a + $b;
+    return (($a + $b) << 32) >> 32;
 };
 $intMul = function($a, $b) use (&$intMul) {
-    return $a * $b;
+    return (($a * $b) << 32) >> 32;
 };
-$numAdd = $intAdd;
-$numMul = $intMul;
+$numAdd = function($a, $b) use (&$numAdd) {
+    return (float)($a + $b);
+};
+$numMul = function($a, $b) use (&$numMul) {
+    return (float)($a * $b);
+};
 
 $exports['intAdd'] = $intAdd;
 $exports['intMul'] = $intMul;
