@@ -1,7 +1,7 @@
 <?php
 
 $intSub = function($a, $b) use (&$intSub) {
-    return (($a - $b) << 32) >> 32;
+    return $a - $b;
 };
 $numSub = function($a, $b) use (&$numSub) {
     return (float)($a - $b);

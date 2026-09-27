@@ -1,10 +1,10 @@
 <?php
 
 $intAdd = function($a, $b) use (&$intAdd) {
-    return (($a + $b) << 32) >> 32;
+    return $a + $b;
 };
 $intMul = function($a, $b) use (&$intMul) {
-    return (($a * $b) << 32) >> 32;
+    return $a * $b;
 };
 $numAdd = function($a, $b) use (&$numAdd) {
     return (float)($a + $b);

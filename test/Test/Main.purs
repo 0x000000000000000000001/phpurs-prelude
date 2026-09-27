@@ -1,6 +1,7 @@
 module Test.Main where
 
 import Prelude
+import Effect (Effect)
 import Data.HeytingAlgebra (ff, tt, implies)
 import Data.Ord (abs, signum)
 import Data.Reflectable (reflectType, reifyType)
@@ -10,8 +11,13 @@ import Test.Data.Generic.Rep (testGenericRep)
 import Test.Utils (AlmostEff, assert)
 import Type.Proxy (Proxy(..))
 
-main :: AlmostEff
+main :: Effect Unit
 main = do
+    let _ = runTests unit
+    pure unit
+
+runTests :: AlmostEff
+runTests = do
     testNumberShow show
     testOrderings
     testOrdUtils
